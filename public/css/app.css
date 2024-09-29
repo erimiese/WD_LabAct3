@@ -1,0 +1,158 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8d6a7;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fdbf50;
+    color: white;
+}
+
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header .auth-links a {
+    margin-left: 10px;
+}
+
+
+.search-section {
+    margin: 30px;
+    text-align: center;
+}
+
+.category-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.contact-us {
+    margin: 20px;
+}
+
+.contact-us form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+
+.contact-us label {
+    margin-top: 10px;
+}
+
+.contact-us input,
+.contact-us textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-us button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f48fbf;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.hero-section {
+    text-align: center;
+    background-color: #f8d6a7;
+    padding: 60px 20px;
+    position: relative;
+}
+
+.hero-section .content-wrapper {
+    display: inline-block; /* Align text and button together */
+    margin-bottom: 30px;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #3d3d3d;
+}
+
+.hero-section h1 .highlight {
+    color: #d29c9c;
+    font-weight: bold;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    color: #5e5e5e;
+    margin-bottom: 20px;
+}
+
+.explore-btn {
+    display: inline-block;
+    background-color: #b58f72;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.explore-btn:hover {
+    background-color: #d29c9c;
+}
+
+.hero-images {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.hero-image-wrapper {
+    position: relative;
+}
+
+.hero-image {
+    width: 150px;
+    height: auto;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.hero-image-wrapper:nth-child(1) .hero-image {
+    transform: rotate(-10deg) translateY(-20px);
+}
+
+.hero-image-wrapper:nth-child(2) .hero-image {
+    transform: translateY(-10px);
+}
+
+.hero-image-wrapper:nth-child(3) .hero-image {
+    transform: rotate(10deg) translateY(-20px);
+}
+
+.hero-image:hover {
+    transform: scale(1.05) translateY(-10px);
+}
