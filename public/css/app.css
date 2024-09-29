@@ -5,23 +5,46 @@ body {
     background-color: #f8d6a7;
 }
 
-header {
+.header {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
-    background-color: #fdbf50;
-    color: white;
+    padding: 15px;
+    background-color: #fdbf50; /* Example header background color */
 }
 
+.header .logo a {
+    font-size: 36px; /* Logo font size set to 36px */
+    font-weight: bold; /* Bold for the logo */
+    color: black; /* Set logo color to black */
+    text-decoration: none; /* No underline */
+}
 
-header nav ul {
+.header nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 35px;
 }
 
-header .auth-links a {
-    margin-left: 10px;
+.header nav ul li a {
+    font-size: 26px; /* Font size for nav links set to 36px */
+    font-weight: 600; /* Semi-bold font weight */
+    color: black; /* Set link color to black */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.header nav ul li a:hover {
+    color: #ffd700; /* Change color on hover (example: gold) */
+}
+
+.auth-links a {
+    font-size: 20px; /* Font size for auth links set to 36px */
+    color: black; /* Set auth link color to black */
+    text-decoration: none; /* Remove underline */
+}
+
+.auth-links a:hover {
+    text-decoration: underline; /* Underline on hover for auth links */
 }
 
 
@@ -135,7 +158,7 @@ header .auth-links a {
 }
 
 .hero-image {
-    width: 150px;
+    width: 300px;
     height: auto;
     border-radius: 20px;
     transition: transform 0.3s ease;
@@ -155,4 +178,61 @@ header .auth-links a {
 
 .hero-image:hover {
     transform: scale(1.05) translateY(-10px);
+}
+
+.search-section {
+    margin: 30px auto; /* Center the search section */
+    text-align: center; /* Center the text inside */
+}
+
+.search-form {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center the form */
+}
+
+.search-wrapper {
+    position: relative; /* Position context for the icon */
+}
+
+.search-input {
+    width: 700px; /* Increase the width of the input */
+    padding: 15px 15px 15px 40px; /* Add padding for comfort, space for icon */
+    border: 2px solid #ccc; /* Border style */
+    border-radius: 15px; /* Rounded edges */
+    font-size: 16px; /* Font size */
+    outline: none; /* Remove outline */
+}
+
+
+
+.explore-categories {
+    text-align: center; /* Center align the text */
+    margin: 20px 0; /* Add some margin for spacing */
+}
+
+.categories-table {
+    width: 100%; /* Make the table full width */
+    border-collapse: collapse; /* Collapse borders */
+}
+
+.category-cell {
+    text-align: center; /* Center align content in the cell */
+    padding: 10px; /* Padding for the cells */
+}
+
+.category-image {
+    width: 100px; /* Set width for images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.category-cell p {
+    margin-top: 5px; /* Space above the category name */
+    font-weight: bold; /* Make the category name bold */
+    color: #333; /* Text color */
+}
+
+.category-cell a {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Use inherited color */
 }

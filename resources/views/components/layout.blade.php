@@ -28,6 +28,7 @@
             <a href="/signin" class="signin-btn">SIGN IN</a>
         </div>
     </header>
+</body>
 
     <!-- Main Content -->
     <main>
