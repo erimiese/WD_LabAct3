@@ -116,34 +116,4 @@
         </table>
     </section>
 
-    <!-- Latest Recipes Section -->
-    <section class="latest-recipes">
-        <h2>Latest Recipes</h2>
-        <div class="recipe-grid">
-            <div class="recipe-card">
-                <img src="{{ asset('images/recipe1.jpg') }}" alt="Recipe 1">
-                <h3>Lactose-Free Homemade Cheese</h3>
-            </div>
-            <div class="recipe-card">
-                <img src="{{ asset('images/recipe2.jpg') }}" alt="Recipe 2">
-                <h3>Tiny Apple Pies with Cinnamon</h3>
-            </div>
-            <!-- Continue with other recipes -->
-        </div>
-        <div class="pagination">
-            <span>1</span>
-            <span>2</span>
-            <span>3</span>
-        </div>
-    </section>
-
-    <!-- Trending Recipes Section -->
-    <section class="trending-recipes">
-        <h2>Trending Recipes</h2>
-        <ul>
-            <li>Gluten-Free Almond Cake with Berries</li>
-            <li>Enjoy My Favorite Molten Chocolate Cake</li>
-            <!-- Add other trending recipes -->
-        </ul>
-    </section>
 @endsection
