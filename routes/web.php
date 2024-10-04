@@ -13,3 +13,7 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('Components.contact');
 })->name('contact');
+
+Route::get('/recipes', function () {
+    return view('Components.recipes');
+})->name('recipes');
