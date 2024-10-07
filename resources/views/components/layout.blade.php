@@ -42,6 +42,18 @@
     </footer>
 
     <!-- Add JS for layout -->
-    <script src="{{ asset('js/app.js') }}"></script>
+    <script>
+        window.onbeforeunload = function() {
+            fetch('/clear-session', {
+                method: 'POST',
+                headers: {
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}', // Include CSRF token
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({}) // Send an empty body
+            });
+        };
+    </script>
+    
 </body>
 </html>

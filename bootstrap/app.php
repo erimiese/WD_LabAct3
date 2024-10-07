@@ -13,9 +13,8 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        // Register global middleware
-        $middleware->append(CheckAge::class);
-        $middleware->append(LogRequests::class);
+        // Register global middleware if needed
+        $middleware->append(LogRequests::class); // Assuming LogRequests is for all requests
 
         // Assign middleware to specific routes using aliases
         $middleware->alias([
@@ -26,5 +25,3 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withExceptions(function (Exceptions $exceptions) {
         //
     })->create();
-
-    

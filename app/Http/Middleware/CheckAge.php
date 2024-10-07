@@ -7,29 +7,12 @@ use Illuminate\Http\Request;
 
 class CheckAge
 {
-    /**
-     * Handle an incoming request.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Closure  $next
-     * @param  int  $minAge
-     * @return mixed
-     */
-    public function handle(Request $request, Closure $next, $minAge = 18)
+    public function handle(Request $request, Closure $next, $age)
     {
-        // Ensure we are not applying the check to /check-age or /access-denied routes
-        if ($request->is('check-age') || $request->is('access-denied')) {
-            return $next($request);
-        }
+        $userAge = $request->session()->get('age'); // Get the age from the session
 
-        // Check if age is provided in the request
-        if (!$request->has('age')) {
-            return redirect('/check-age');
-        }
-
-        // Check if age meets the minimum age requirement
-        if ($request->age < $minAge) {
-            return redirect('access-denied');
+        if ($userAge < $age) {
+            return redirect()->route('access-denied');
         }
 
         return $next($request);
